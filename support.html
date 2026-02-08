@@ -10,339 +10,469 @@
         padding: 0;
         box-sizing: border-box;
       }
+
+      :root {
+        --primary: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary: #ec4899;
+        --accent: #10b981;
+        --dark: #1f2937;
+        --gray: #6b7280;
+        --light-gray: #f3f4f6;
+        --white: #ffffff;
+      }
+
       body {
         font-family:
-          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-          sans-serif;
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
         line-height: 1.6;
-        color: #333;
-        background-color: #f5f5f5;
+        color: var(--dark);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-attachment: fixed;
         padding: 20px;
       }
+
       .container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
-        background-color: white;
-        padding: 40px;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
-      h1 {
-        color: #000;
-        margin-bottom: 10px;
-        font-size: 2.5em;
+
+      .header {
+        background: var(--white);
+        border-radius: 20px 20px 0 0;
+        padding: 50px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
       }
-      h2 {
-        color: #000;
-        margin-top: 30px;
+
+      .header h1 {
+        color: var(--primary);
+        font-size: 3em;
         margin-bottom: 15px;
-        font-size: 1.5em;
+        font-weight: 800;
       }
-      h3 {
-        color: #333;
-        margin-top: 20px;
-        margin-bottom: 10px;
+
+      .header p {
+        color: var(--gray);
         font-size: 1.2em;
       }
-      p {
-        margin-bottom: 15px;
+
+      .content {
+        background: var(--white);
+        padding: 50px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
       }
-      .hero {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+      .hero-banner {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
         color: white;
-        padding: 30px;
-        border-radius: 12px;
-        margin-bottom: 30px;
+        padding: 40px;
+        border-radius: 16px;
+        margin-bottom: 40px;
         text-align: center;
       }
-      .hero h2 {
+
+      .hero-banner h2 {
         color: white;
-        margin-top: 0;
+        font-size: 2em;
+        margin-bottom: 15px;
       }
-      .contact-box {
-        background-color: #f9f9f9;
-        border-left: 4px solid #007aff;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 4px;
-      }
-      .faq-item {
-        margin-bottom: 20px;
-        padding: 15px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-      }
-      .faq-item h4 {
-        color: #007aff;
-        margin-bottom: 10px;
+
+      .hero-banner p {
+        color: rgba(255, 255, 255, 0.95);
         font-size: 1.1em;
       }
-      a {
-        color: #007aff;
-        text-decoration: none;
+
+      .contact-box {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        border-left: 6px solid #f59e0b;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 12px;
       }
-      a:hover {
-        text-decoration: underline;
+
+      .contact-box h3 {
+        color: #92400e;
+        margin-bottom: 20px;
       }
+
+      .contact-box p {
+        color: #78350f;
+        margin-bottom: 10px;
+      }
+
+      .contact-box a {
+        color: #b45309;
+        font-weight: 600;
+      }
+
+      h2 {
+        color: var(--dark);
+        margin-top: 50px;
+        margin-bottom: 25px;
+        font-size: 2em;
+        font-weight: 700;
+      }
+
+      h3 {
+        color: var(--primary);
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.4em;
+        font-weight: 600;
+      }
+
+      p {
+        color: var(--gray);
+        margin-bottom: 15px;
+        line-height: 1.8;
+      }
+
+      .faq-item {
+        margin-bottom: 25px;
+        padding: 25px;
+        background: var(--light-gray);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .faq-item:hover {
+        background: #e5e7eb;
+        transform: translateX(5px);
+      }
+
+      .faq-item h4 {
+        color: var(--primary);
+        margin-bottom: 12px;
+        font-size: 1.2em;
+      }
+
+      .faq-item p {
+        color: var(--gray);
+      }
+
       ul {
         margin-left: 20px;
         margin-bottom: 15px;
       }
+
       li {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+        color: var(--gray);
       }
+
+      strong {
+        color: var(--dark);
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+      }
+
       .btn {
         display: inline-block;
-        background-color: #007aff;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
         color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
+        padding: 15px 35px;
+        border-radius: 10px;
         text-decoration: none;
-        margin-top: 10px;
-        font-weight: 600;
+        margin-top: 20px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
       }
+
       .btn:hover {
-        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
         text-decoration: none;
       }
-      @media (max-width: 600px) {
-        .container {
-          padding: 20px;
+
+      .safety-warning {
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+        border-left: 6px solid #ef4444;
+        padding: 25px;
+        border-radius: 12px;
+        margin: 25px 0;
+      }
+
+      .safety-warning h3 {
+        color: #991b1b;
+      }
+
+      .safety-warning li {
+        color: #7f1d1d;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px;
+        color: white;
+        margin-top: 40px;
+      }
+
+      footer a {
+        color: white;
+        margin: 0 15px;
+      }
+
+      @media (max-width: 768px) {
+        .header,
+        .content {
+          padding: 30px 20px;
         }
-        h1 {
+
+        .header h1 {
           font-size: 2em;
         }
-        .hero {
-          padding: 20px;
+
+        h2 {
+          font-size: 1.6em;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>ShoeMate Support</h1>
-
-      <div class="hero">
-        <h2>We're Here to Help!</h2>
-        <p>
-          Have questions about buying, selling, or trading sneakers? Need help with split sizes or
-          mismatched pairs? We're here to support you every step of the way.
-        </p>
+      <div class="header">
+        <h1>ShoeMate Support</h1>
+        <p>We're here to help you find your perfect fit!</p>
       </div>
 
-      <div class="contact-box">
-        <h3>Contact Us</h3>
-        <p>
-          <strong>Email:</strong> <a href="mailto:support@shoemate.app">support@shoemate.app</a>
-        </p>
-        <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
-        <p><strong>Business Hours:</strong> Monday - Friday, 9 AM - 6 PM EST</p>
-      </div>
+      <div class="content">
+        <div class="hero-banner">
+          <h2>Need Help With Mismatched Sizes?</h2>
+          <p>
+            Have questions about swapping shoes or finding your size match?
+            We're here to support you every step of the way.
+          </p>
+        </div>
 
-      <h2>Frequently Asked Questions</h2>
+        <div class="contact-box">
+          <h3>Contact Us</h3>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:support@shoemate.app">support@shoemate.app</a>
+          </p>
+          <p>
+            <strong>Response Time:</strong> We typically respond within 24-48
+            hours
+          </p>
+          <p>
+            <strong>Business Hours:</strong> Monday - Friday, 9 AM - 6 PM EST
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h4>What is ShoeMate?</h4>
-        <p>
-          ShoeMate is a location-based app that connects sneaker collectors to buy, sell, and trade
-          shoes. We specialize in helping people find mismatched pairs - perfect for those who have
-          different shoe sizes for each foot!
-        </p>
-      </div>
+        <h2>Frequently Asked Questions</h2>
 
-      <div class="faq-item">
-        <h4>How do I find collectors with mismatched sizes?</h4>
-        <p>
-          During signup, you can specify split sizes (e.g., Left: 10, Right: 11). Our matching
-          algorithm will connect you with collectors who have the complementary sizes. You can also
-          filter by split sizes in the discovery settings.
-        </p>
-      </div>
+        <div class="faq-item">
+          <h4>What is ShoeMate?</h4>
+          <p>
+            ShoeMate helps people with different shoe sizes for each foot find
+            others to swap with. If you wear a size 9 on your left foot and size
+            10 on your right, we connect you with someone who wears 10 left and
+            9 right. You both buy the shoes you want, meet up, and swap to get
+            the perfect fit!
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h4>Is ShoeMate free to use?</h4>
-        <p>
-          ShoeMate is a one-time purchase of $4.99 with no subscription fees. This gives you full
-          access to all features including unlimited swipes, messaging, and split-size matching.
-        </p>
-      </div>
+        <div class="faq-item">
+          <h4>How do I find someone with my mismatched sizes?</h4>
+          <p>
+            During signup, specify your split sizes (e.g., Left: 9, Right: 10).
+            Our smart matching algorithm connects you with people nearby who
+            have complementary sizes. You can also filter by brand, style, and
+            location to find the perfect swap partner.
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h4>How do I stay safe when meeting collectors?</h4>
-        <p>
-          Always meet in public places like malls, sneaker stores, or coffee shops. Bring a friend
-          when possible, and let someone know where you're going. Trust your instincts - if
-          something feels off, don't proceed with the trade.
-        </p>
-      </div>
+        <div class="faq-item">
+          <h4>Do I have to pay for the app?</h4>
+          <p>
+            ShoeMate costs $4.99 as a one-time purchase with no subscriptions.
+            This gives you unlimited access to swipe, match, message, and find
+            your perfect shoe swap partners.
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h4>How do I verify authentic sneakers?</h4>
-        <p>
-          Check out our Resources tab in the app for detailed authentication guides. We recommend:
-        </p>
+        <div class="faq-item">
+          <h4>How does the swap actually work?</h4>
+          <p>Here's the typical process:</p>
+          <ul>
+            <li>
+              Both people buy the shoes they want (you buy 2 pairs of size 9,
+              they buy 2 pairs of size 10)
+            </li>
+            <li>Connect through the app and chat about meeting</li>
+            <li>Meet in a safe public place</li>
+            <li>
+              Exchange one shoe from each pair (you give them a size 9, they
+              give you a size 10)
+            </li>
+            <li>Both of you now have perfectly fitting shoes for both feet!</li>
+          </ul>
+        </div>
+
+        <div class="faq-item">
+          <h4>Can I change my shoe sizes after signing up?</h4>
+          <p>
+            Absolutely! Go to Profile → Edit Profile → Shoe Sizes. You can
+            update your sizes anytime, which will automatically update your
+            matching preferences.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Why isn't my location working?</h4>
+          <p>
+            Make sure location services are enabled: Settings → Privacy →
+            Location Services → ShoeMate. You may need to restart the app after
+            changing permissions. Location helps us show you swap partners
+            nearby!
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How do I report a problem with another user?</h4>
+          <p>
+            Go to their profile, tap the menu icon, and select "Report." You can
+            also block users directly. For serious issues, email us at
+            <a href="mailto:support@shoemate.app">support@shoemate.app</a>.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How do I delete my account?</h4>
+          <p>
+            Go to Profile → Settings → Delete Account. This permanently removes
+            all your data from our servers. Note: This cannot be undone.
+          </p>
+        </div>
+
+        <h2>Getting Started</h2>
+
+        <h3>1. Set Up Your Profile</h3>
         <ul>
-          <li>Examining stitching quality and patterns</li>
-          <li>Checking the box label and materials</li>
-          <li>Verifying the shoe's unique details against official images</li>
-          <li>Using professional authentication services for high-value items</li>
+          <li>Upload a clear profile photo</li>
+          <li>Add your left and right shoe sizes (they can be different!)</li>
+          <li>Select your favorite brands (Nike, Adidas, New Balance, etc.)</li>
+          <li>Write a bio about your style</li>
         </ul>
+
+        <h3>2. Find Swap Partners</h3>
+        <ul>
+          <li>Swipe through profiles of people with complementary sizes</li>
+          <li>Filter by brand, location, and style</li>
+          <li>Swipe right to like, left to pass</li>
+        </ul>
+
+        <h3>3. Connect and Swap</h3>
+        <ul>
+          <li>When you match, start chatting immediately</li>
+          <li>Discuss which shoes you want and coordinate purchase</li>
+          <li>Agree on a safe public meeting place</li>
+          <li>Meet, swap, and enjoy perfectly fitting shoes!</li>
+        </ul>
+
+        <h2>Safety Guidelines</h2>
+
+        <div class="safety-warning">
+          <h3>Always Meet Safely</h3>
+          <ul>
+            <li>
+              <strong>Public Places Only:</strong> Meet in malls, sneaker
+              stores, or busy public areas
+            </li>
+            <li>
+              <strong>Bring a Friend:</strong> Have someone accompany you when
+              possible
+            </li>
+            <li>
+              <strong>Tell Someone:</strong> Let a friend or family member know
+              where you're going
+            </li>
+            <li>
+              <strong>Daytime Meetings:</strong> Prefer daylight hours for
+              visibility and safety
+            </li>
+            <li>
+              <strong>Inspect First:</strong> Check the shoes before completing
+              the swap
+            </li>
+            <li>
+              <strong>Trust Your Instincts:</strong> If something feels off,
+              don't proceed
+            </li>
+          </ul>
+        </div>
+
+        <h3>Red Flags to Watch For</h3>
+        <ul>
+          <li>Unwillingness to meet in public</li>
+          <li>Pressure to complete the swap quickly</li>
+          <li>Refusal to show photos of the shoes</li>
+          <li>Aggressive or pushy behavior</li>
+          <li>Deals that seem too good to be true</li>
+        </ul>
+
+        <h2>Still Need Help?</h2>
+
+        <div class="contact-box">
+          <h3>Get in Touch</h3>
+          <p>
+            <strong>General Support:</strong>
+            <a href="mailto:support@shoemate.app">support@shoemate.app</a>
+          </p>
+          <p>
+            <strong>Privacy Questions:</strong>
+            <a href="mailto:privacy@shoemate.app">privacy@shoemate.app</a>
+          </p>
+          <p>
+            <strong>Bug Reports:</strong> Include your device type, iOS version,
+            and steps to reproduce
+          </p>
+          <p><strong>Feature Requests:</strong> We love hearing your ideas!</p>
+        </div>
+
+        <p style="text-align: center">
+          <a href="mailto:support@shoemate.app" class="btn">Contact Support</a>
+        </p>
+
+        <div
+          style="
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--light-gray);
+            text-align: center;
+          "
+        >
+          <p>
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="index.html">Back to Home</a>
+          </p>
+        </div>
       </div>
 
-      <div class="faq-item">
-        <h4>Can I change my shoe sizes after signup?</h4>
-        <p>
-          Yes! Go to Profile → Edit Profile → Shoe Sizes. You can update your regular size or split
-          sizes anytime. This will update your matching preferences.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h4>How do I report a problem with another user?</h4>
-        <p>
-          Go to the user's profile, tap the menu icon, and select "Report." You can also block users
-          from their profile. For serious issues, email us at
-          <a href="mailto:support@shoemate.app">support@shoemate.app</a>.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Why isn't my location working?</h4>
-        <p>
-          Make sure location services are enabled for ShoeMate in your device settings (Settings →
-          Privacy → Location Services → ShoeMate). You may need to restart the app after changing
-          permissions.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h4>How do I delete my account?</h4>
-        <p>
-          Go to Profile → Settings → Delete Account. This will permanently remove all your data from
-          our servers. Note: This action cannot be undone.
-        </p>
-      </div>
-
-      <h2>Getting Started</h2>
-
-      <h3>1. Set Up Your Profile</h3>
-      <ul>
-        <li>Upload a clear profile photo</li>
-        <li>Add a bio describing your collecting interests</li>
-        <li>Specify your shoe sizes (including split sizes if needed)</li>
-        <li>Select your favorite brands</li>
-      </ul>
-
-      <h3>2. Discover Collectors</h3>
-      <ul>
-        <li>Swipe through profiles in your area</li>
-        <li>Filter by brand, size, and price range</li>
-        <li>Tap the info button to see more details</li>
-        <li>Swipe right to like, left to pass</li>
-      </ul>
-
-      <h3>3. Connect and Trade</h3>
-      <ul>
-        <li>When you match, start chatting immediately</li>
-        <li>Discuss details, condition, and price</li>
-        <li>Agree on a safe public meeting place</li>
-        <li>Complete your trade!</li>
-      </ul>
-
-      <h2>Troubleshooting</h2>
-
-      <h3>App Crashes</h3>
-      <p>If the app crashes:</p>
-      <ul>
-        <li>Force close and reopen the app</li>
-        <li>Update to the latest version from the App Store</li>
-        <li>Restart your device</li>
-        <li>If issues persist, contact support</li>
-      </ul>
-
-      <h3>Can't Send Messages</h3>
-      <p>If messaging isn't working:</p>
-      <ul>
-        <li>Check your internet connection</li>
-        <li>Ensure you have an active match</li>
-        <li>Try force-closing and reopening the app</li>
-        <li>Check notification settings</li>
-      </ul>
-
-      <h3>Location Not Updating</h3>
-      <p>If your location isn't showing correctly:</p>
-      <ul>
-        <li>Verify location permissions are enabled</li>
-        <li>Enable Wi-Fi for better accuracy</li>
-        <li>Move to an area with better GPS signal</li>
-        <li>Try toggling Airplane Mode on and off</li>
-      </ul>
-
-      <h2>Safety Guidelines</h2>
-
-      <h3>Meeting in Person</h3>
-      <ul>
-        <li>
-          <strong>Public Places Only:</strong> Meet in malls, sneaker stores, or busy public areas
-        </li>
-        <li><strong>Bring a Friend:</strong> When possible, have someone accompany you</li>
-        <li>
-          <strong>Tell Someone:</strong> Let a friend or family member know where you're going
-        </li>
-        <li><strong>Daytime Meetings:</strong> Prefer daylight hours for visibility and safety</li>
-        <li><strong>Cash or Verified Payment:</strong> Use secure payment methods</li>
-        <li>
-          <strong>Inspect Before Paying:</strong> Always check the shoes before completing the
-          transaction
-        </li>
-      </ul>
-
-      <h3>Red Flags to Watch For</h3>
-      <ul>
-        <li>Unwillingness to meet in public</li>
-        <li>Pressure to complete the deal quickly</li>
-        <li>Requests for payment before meeting</li>
-        <li>Refusal to show detailed photos</li>
-        <li>Prices that seem too good to be true</li>
-        <li>Aggressive or pushy behavior</li>
-      </ul>
-
-      <h2>Contact Support</h2>
-
-      <p>Still need help? We're here for you!</p>
-
-      <div class="contact-box">
-        <h3>Get in Touch</h3>
-        <p>
-          <strong>General Support:</strong>
-          <a href="mailto:support@shoemate.app">support@shoemate.app</a>
-        </p>
-        <p>
-          <strong>Privacy Questions:</strong>
-          <a href="mailto:privacy@shoemate.app">privacy@shoemate.app</a>
-        </p>
-        <p>
-          <strong>Bug Reports:</strong> Include your device type, iOS version, and steps to
-          reproduce the issue
-        </p>
-        <p><strong>Feature Requests:</strong> We love hearing your ideas!</p>
-      </div>
-
-      <p style="text-align: center; margin-top: 40px">
-        <a href="mailto:support@shoemate.app" class="btn">Contact Support</a>
-      </p>
-
-      <div
-        style="
-          margin-top: 40px;
-          padding-top: 20px;
-          border-top: 1px solid #eee;
-          text-align: center;
-          color: #666;
-        ">
-        <p><a href="privacy.html">Privacy Policy</a></p>
-        <p style="font-size: 0.9em; margin-top: 10px">© 2026 ShoeMate. All rights reserved.</p>
-      </div>
+      <footer>
+        <p style="opacity: 0.9">© 2026 ShoeMate. All rights reserved.</p>
+      </footer>
     </div>
   </body>
 </html>
